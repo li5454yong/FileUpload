@@ -125,7 +125,7 @@ $(function () {
                     fileObj.upLoadSize = getUpLoadSize(file);
                     if(fileObj.upLoadSize < fileObj.size){
                     	//console.log(fileObj.upLoadSize)
-                        sendBlob('http://localhost:8080/FileSys/v1/uploadImg',getBlod(fileObj.oldFile),{'name':fileObj.name});
+                        sendBlob(opt.uploadUrl,getBlod(fileObj.oldFile),{'name':fileObj.name});
                     }
                 }
             }
